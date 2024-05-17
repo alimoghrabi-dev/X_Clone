@@ -6,6 +6,7 @@ import authRouter from "./routes/auth.routes.js";
 import usersRouter from "./routes/users.routes.js";
 import { v2 as cloudinary } from "cloudinary";
 import postRouter from "./routes/post.routes.js";
+import notificationRouter from "./routes/notifications.routes.js";
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ app.use(cookieParser());
 app.use("/api/auth", authRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/post", postRouter);
+app.use("/api/notifications", notificationRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is Running on Port ${PORT}`);
